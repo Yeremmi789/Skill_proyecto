@@ -1,0 +1,400 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "gestor de citas",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "funciona la aplicación",
+                        "cómo funciona la aplicación",
+                        "necesito ayuda",
+                        "ayuda",
+                        "como funciona la aplicacion"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "GetPokemonInfoIntent",
+                    "slots": [
+                        {
+                            "name": "pokemon",
+                            "type": "POKEMON_NAMES"
+                        }
+                    ],
+                    "samples": [
+                        "dime sobre {pokemon}",
+                        "Dime sobre el pokémon {pokemon}",
+                        "Información de {pokemon}"
+                    ]
+                },
+                {
+                    "name": "ObtenerTodo",
+                    "slots": [],
+                    "samples": [
+                        "muestra todo",
+                        "Dime la lista de todos los Pokemon",
+                        "Cuales son todos los Pokemon",
+                        "Lista de Pokemon"
+                    ]
+                },
+                {
+                    "name": "GetAllTerapeutasIntent",
+                    "slots": [],
+                    "samples": [
+                        "muestrame a los usuarios"
+                    ]
+                },
+                {
+                    "name": "GetAllPacientesIntent",
+                    "slots": [],
+                    "samples": [
+                        "todos los pacientes",
+                        "mostrar pacientes"
+                    ]
+                },
+                {
+                    "name": "GetPacienteIntent",
+                    "slots": [
+                        {
+                            "name": "nombre",
+                            "type": "POKEMON_NAMES"
+                        },
+                        {
+                            "name": "apellP",
+                            "type": "POKEMON_NAMES"
+                        },
+                        {
+                            "name": "apellM",
+                            "type": "POKEMON_NAMES"
+                        }
+                    ],
+                    "samples": [
+                        "muestrame a {nombre} {apellP} {apellM}",
+                        "muestrame al paciente {nombre}"
+                    ]
+                },
+                {
+                    "name": "CrearCitaIntent",
+                    "slots": [
+                        {
+                            "name": "tipo_Cita",
+                            "type": "TIPO_CITAS"
+                        },
+                        {
+                            "name": "paciente",
+                            "type": "AMAZON.FirstName"
+                        },
+                        {
+                            "name": "apellP",
+                            "type": "POKEMON_NAMES"
+                        },
+                        {
+                            "name": "apellM",
+                            "type": "POKEMON_NAMES"
+                        },
+                        {
+                            "name": "terapeuta",
+                            "type": "AMAZON.FirstName"
+                        },
+                        {
+                            "name": "fecha",
+                            "type": "AMAZON.DATE"
+                        },
+                        {
+                            "name": "hora",
+                            "type": "AMAZON.TIME"
+                        }
+                    ],
+                    "samples": [
+                        "quiero registrar una cita de tipo inicial {tipo_Cita} para el paciente {paciente} {apellP} {apellM} con {terapeuta} el {fecha} a las {hora}",
+                        "quiero agendar una cita {tipo_Cita} para el paciente {paciente} {apellP} {apellM} con {terapeuta} el {fecha} a las {hora}",
+                        "registra una cita {tipo_Cita} para {paciente} {apellP} {apellM} con {terapeuta} el {fecha} a las {hora}",
+                        "agendar cita {tipo_Cita} {paciente} {apellP} {apellM} {terapeuta} el {fecha} a las {hora}",
+                        "crear cita {tipo_Cita} {paciente} {apellP} {apellM} {terapeuta} el {fecha} a las {hora}"
+                    ]
+                },
+                {
+                    "name": "CUSTOMpruebaIntent",
+                    "slots": [
+                        {
+                            "name": "telefono",
+                            "type": "AMAZON.PhoneNumber"
+                        },
+                        {
+                            "name": "nombres",
+                            "type": "AMAZON.FirstName"
+                        }
+                    ],
+                    "samples": [
+                        "quiero agregar a {nombres} con el numero {telefono}"
+                    ]
+                },
+                {
+                    "name": "GetTodosIntent",
+                    "slots": [],
+                    "samples": [
+                        "quiero todo"
+                    ]
+                },
+                {
+                    "name": "Pendientes_General_Intent",
+                    "slots": [],
+                    "samples": [
+                        "necesito que me digas los pendientes",
+                        "quiero saber mis citas pendientes",
+                        "consultar citas sin completar",
+                        "que citas tengo agendadas",
+                        "mostrar citas pendientes"
+                    ]
+                },
+                {
+                    "name": "Pendientes_solicitados_Intent",
+                    "slots": [],
+                    "samples": [
+                        "mencioname todos las citas pendientes"
+                    ]
+                },
+                {
+                    "name": "Selec_FechaCitas_Intent",
+                    "slots": [
+                        {
+                            "name": "fecha",
+                            "type": "AMAZON.DATE"
+                        }
+                    ],
+                    "samples": [
+                        "quiero ver mis citas para {fecha}",
+                        "citas {fecha}",
+                        "ver citas {fecha}",
+                        "mis citas para {fecha}",
+                        "para {fecha}",
+                        "las citas de {fecha}"
+                    ]
+                },
+                {
+                    "name": "CancelarCitaIntent",
+                    "slots": [
+                        {
+                            "name": "ClaveFolio",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "necesito cancelar la cita con el folio {ClaveFolio}",
+                        "cancela la cita con el folio {ClaveFolio}"
+                    ]
+                },
+                {
+                    "name": "ReprogramarCitaIntent",
+                    "slots": [
+                        {
+                            "name": "ClaveFolio",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "fecha",
+                            "type": "AMAZON.DATE"
+                        },
+                        {
+                            "name": "hora",
+                            "type": "AMAZON.TIME"
+                        }
+                    ],
+                    "samples": [
+                        "quiero posponer la cita con el folio {ClaveFolio} al día {fecha} a las {hora}",
+                        "quiero posponer la cita con el folio {ClaveFolio} al dia {fecha} a las {hora}",
+                        "reprograma la cita con el folio {ClaveFolio} al dia {fecha} a las {hora}"
+                    ]
+                },
+                {
+                    "name": "IntentDeInicio",
+                    "slots": [],
+                    "samples": [
+                        "quiero agendar una cita"
+                    ]
+                },
+                {
+                    "name": "AyudaInteraccionIntent",
+                    "slots": [
+                        {
+                            "name": "duda",
+                            "type": "DudaType"
+                        }
+                    ],
+                    "samples": [
+                        "cómo {duda} una cita",
+                        "como {duda} una cita"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "POKEMON_NAMES",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "yeremmi"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pikachu"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bulbasaur"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "charizard"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "TIPO_CITAS",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "finalizacion",
+                                "synonyms": [
+                                    "3",
+                                    "terminal"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "seguimiento",
+                                "synonyms": [
+                                    "2",
+                                    "continuidad"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "inicial",
+                                "synonyms": [
+                                    "1",
+                                    "primera"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "TERAPEUTA_NAMES",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "User User User",
+                                "synonyms": [
+                                    "1",
+                                    "user"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Admin Admin Admin",
+                                "synonyms": [
+                                    "1",
+                                    "admin"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "NOMBRE",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "yeremmi"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "TELEFONO",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "1234567890"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "9876543210"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "5555555555"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "DudaType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "cancelo",
+                                "synonyms": [
+                                    "finalizo",
+                                    "termino"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "reprogramo",
+                                "synonyms": [
+                                    "posponer"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "consulto",
+                                "synonyms": [
+                                    "adquiero",
+                                    "obtengo"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "agendo",
+                                "synonyms": [
+                                    "creo",
+                                    "registro"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
